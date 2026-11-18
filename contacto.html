@@ -5,22 +5,34 @@
   Última revisión: FECHA
 -->
 <html lang="es">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- TODO: título único y descriptivo, por ejemplo «Sede y contacto · Rueda Libre» -->
   <title>Sede y contacto · Rueda Libre</title>
   <!-- TODO (sesión 8): enlaza aquí tu hoja de estilos -->
+  <link rel="stylesheet" href="css/estilos.css">
+  <style>
+    iframe {
+      width: 100%;
+      max-width: 700px;
+      height: 350px;
+      border: 0;
+    }
+  </style>
 </head>
+
 <body>
   <header>
     <!-- TODO: nombre o logo del negocio -->
     <p>Rueda Libre</p>
     <nav aria-label="Principal">
-      <!-- TODO (sesión 4): convierte el menú en una lista de enlaces -->
-      <a href="index.html">Inicio</a>
-      <a href="servicios.html">Servicios</a>
-      <a href="contacto.html">Contacto</a>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+      </ul>
     </nav>
   </header>
 
@@ -28,12 +40,57 @@
     <!-- TODO: un único h1 con el título de la página -->
     <h1>Sede y contacto</h1>
     <!-- TODO (sesión 3): sustituye por el texto real de la carpeta «textos» -->
-    <p>Texto de la página.</p>
+    <p>Dirección:</p>
+    <address>
+      Calle de la Rueda, 12<br>
+      28901 Getafe (Madrid)
+    </address>
+    <p>Teléfono: <a href="tel:+34910000000">910 000 000</a>
+    </p>
+    <p>Correo: <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>
+    </p>
+    <section aria-labelledby="como-llegar">
+      <h2 id="como-llegar">Cómo llegar</h2>
+      <ul>
+        <li> En tren: línea de Cercanías, estación de Getafe Centro, a 10 minutos andando.</li>
+        <li> En autobús: varias líneas urbanas paran a menos de 200 m.</li>
+        <li> En bici: por el carril bici del barrio, hasta la puerta.</li>
+      </ul>
+      <p> Aparcamiento de bicis: gratuito, a la puerta del local.
+      </p>
+      <p>Accesibilidad del local: acceso a nivel de calle, sin escalones.
+      </p>
+
+      <p> Mapa: incrustar un mapa de OpenStreetMap de Getafe (iframe) y, como ampliación, un mapa de imagen o SVG con zonas
+        pulsables. </p>
+        <iframe
+    title="Mapa de Rueda Libre en Getafe"
+    src="https://www.openstreetmap.org/export/embed?bbox=-3.747547566890717%2C40.293602442035734%2C-3.744028508663178%2C40.295429343141166&amp;layer=mapnik&amp;marker=40.29451589876237%2C-3.745788037776947"
+    width="425"
+    height="350"
+    loading="lazy"
+  ></iframe><br /><small><a
+            href="https://www.openstreetmap.org/?mlat=40.294516&amp;mlon=-3.745788#map=19/40.294516/-3.745788"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ver el mapa más grande
+          </a></small>
+        un mapa de imagen o SVG con zonas pulsables.
+    </section>
   </main>
 
   <footer>
-    <!-- TODO: dirección, teléfono (tel:) y correo (mailto:) -->
-    <p>&copy; Rueda Libre</p>
+    <address>
+      Calle de la Rueda, 12 · 28901 Getafe (Madrid)
+    </address>
+    <p>
+      <a href="tel:+34910000000">910 000 000</a>
+      ·
+      <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>
+    </p>
+    <p>&copy; 2026 Rueda Libre</p>
   </footer>
 </body>
+
 </html>
