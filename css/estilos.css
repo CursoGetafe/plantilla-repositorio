@@ -6,12 +6,16 @@
 /* 1. Variables (sesión 8) */
 
 /* 2. Base */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: sans-serif;
   line-height: 1.5;
-  margin: 0;
-  padding: 0;
+ 
 }
 
 /* 3. Estructura de página (sesiones 9 y 10) */
