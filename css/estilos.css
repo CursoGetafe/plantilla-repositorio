@@ -7,6 +7,13 @@
 
 /* 2. Base */
 
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
 /* 3. Estructura de página (sesiones 9 y 10) */
 
 /* 4. Componentes */
