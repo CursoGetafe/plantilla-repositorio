@@ -65,8 +65,12 @@ article ul{
 
 main section {
   list-style-position: inside;
-  width: 80%;  
+  width: 80%;
+  li, p, h2, dd, dt {
+    text-align: left; 
+  } 
 }
+
 
 section {
   text-align: center;
