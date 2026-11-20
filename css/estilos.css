@@ -6,7 +6,7 @@
 /* 1. Variables (sesión 8) */
 
 /* 2. Base */
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -15,10 +15,47 @@
 body {
   font-family: sans-serif;
   line-height: 1.5;
- 
+  background-color: #dfdfdf;
 }
 
 /* 3. Estructura de página (sesiones 9 y 10) */
+
+header {
+  background-color: #fff;
+  color: #1a805b;
+  padding: 1rem;
+  text-align: center;
+
+  nav {
+    margin-top: 1rem;
+
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+
+      li {
+        a {
+          color: #1a805b;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+            color: #1bd490;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: #1a805b;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
 
 /* 4. Componentes */
 
