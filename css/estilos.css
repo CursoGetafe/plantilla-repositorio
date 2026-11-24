@@ -24,7 +24,8 @@ body {
   flex-direction: column;  /* 2. Apila header, main y footer en vertical */
   font-family: sans-serif;
   line-height: 1.5;
-  background-color: #dfdfdf;
+  /*background-color: #dfdfdf;*/
+  background-color: #F4F7F5; /* Color de fondo más claro */
 }
 
 main {
@@ -35,7 +36,7 @@ main {
 /* 3. Estructura de página (sesiones 9 y 10) */
 
 header {
-  background-color: #1a805b;
+  background-color: #1E7E52;
   color: #1a805b;
   padding: 1rem;
   text-align: center;
@@ -91,7 +92,7 @@ header {
   margin: 1rem;
   background-color: #fff;
   border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
   
 }
 
@@ -122,7 +123,7 @@ header {
   margin: 1rem ; /* 'auto' a los lados centra la tarjeta al tener width: 80% */
   background-color: #fff;
   border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Opacidad suavizada */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25); /* Opacidad suavizada */
 }
 
 .reservas__formulario {
@@ -132,7 +133,7 @@ header {
   margin: 1rem; /* 'auto' a los lados centra la tarjeta al tener width: 80% */
   background-color: #fff;
   border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Opacidad suavizada */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25); /* Opacidad suavizada */
 }
 
 /*Contacto*/
@@ -143,7 +144,7 @@ header {
   margin: 1rem; /* 'auto' a los lados centra la tarjeta al tener width: 80% */
   background-color: #fff;
   border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Opacidad suavizada */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25); /* Opacidad suavizada */
 }
 
 article ul, div ul{
@@ -155,7 +156,7 @@ article ul, div ul{
 
 footer {
   
-  background-color: #1a805b;
+  background-color: #1E7E52;
   color: #fff;
   padding: 1rem;
   text-align: center;
