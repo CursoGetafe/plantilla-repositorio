@@ -9,6 +9,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+
   <!-- TODO: título único y descriptivo, por ejemplo «Sede y contacto · Rueda Libre» -->
   <title>Sede y contacto · Rueda Libre</title>
   <!-- TODO (sesión 8): enlaza aquí tu hoja de estilos -->
@@ -38,9 +40,9 @@
     </nav>
   </header>
 
-  <main>
+  <main class="contacto__main">
     <!-- TODO: un único h1 con el título de la página -->
-
+    <div class="sede__contacto">
     <h1>Sede y contacto</h1>
     <!-- TODO (sesión 3): sustituye por el texto real de la carpeta «textos» -->
     <p>Dirección:</p>
@@ -52,7 +54,8 @@
     </p>
     <p>Correo: <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>
     </p>
-    <section aria-labelledby="como-llegar">
+    </div>
+    <div aria-labelledby="como-llegar" class="como-llegar">
       <h2 id="como-llegar">Cómo llegar</h2>
       <ul>
         <li> En tren: línea de Cercanías, estación de Getafe Centro, a 10 minutos andando.</li>
@@ -74,7 +77,7 @@
           Ver el mapa más grande
         </a></small>
       un mapa de imagen o SVG con zonas pulsables.
-    </section>
+    </div>
   </main>
 
   <footer>
