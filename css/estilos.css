@@ -50,7 +50,7 @@ header {
   }
 }
 
-.servicios__main{
+.servicios__main, .reserva__main, .tarifas__main {
   display: flex;
   flex-direction: column;
   justify-content: center;
