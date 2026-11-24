@@ -50,35 +50,48 @@ header {
   }
 }
 
-.servicios__main, .reserva__main, .tarifas__main {
+.inicio__main,
+.servicios__main,
+.reserva__main,
+.tarifas__main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center; 
-}
-article ul{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  
-}
-
-main section {
-  list-style-position: inside;
-  width: 80%;
-  li, p, h2, dd, dt {
-    text-align: left; 
-  } 
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 1rem; /* Evita que las tarjetas toquen los bordes en pantallas pequeñas */
 }
 
 
-section {
+.resumen-negocio {
   text-align: center;
   padding: 2rem;
   margin: 1rem;
   background-color: #fff;
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.9);
+  
+}
+
+.alquiler__bicicletas,
+.taller__reparaciones,
+.revision__bicicletas,
+.rutas__guiadas,
+.glosario__cliente
+{
+  width: 80%;
+  text-align: center;
+  padding: 2rem;
+  margin: 1rem auto; /* 'auto' a los lados centra la tarjeta al tener width: 80% */
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Opacidad suavizada */
+}
+
+
+article ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
   
 }
 
