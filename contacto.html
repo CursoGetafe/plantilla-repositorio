@@ -64,7 +64,7 @@
         zonas pulsables. </p>
       <iframe title="Mapa de Rueda Libre en Getafe"
         src="https://www.openstreetmap.org/export/embed?bbox=-3.747547566890717%2C40.293602442035734%2C-3.744028508663178%2C40.295429343141166&amp;layer=mapnik&amp;marker=40.29451589876237%2C-3.745788037776947"
-        width="425" height="350" loading="lazy"></iframe><br /><small><a
+        width="425" height="350" loading="lazy"></iframe><br><small><a
           href="https://www.openstreetmap.org/?mlat=40.294516&amp;mlon=-3.745788#map=19/40.294516/-3.745788"
           target="_blank" rel="noopener noreferrer">
           Ver el mapa más grande
@@ -75,45 +75,45 @@
       <h2 id="formulario-contacto">Escríbenos</h2>
       <p class="contacto__intro">Cuéntanos qué necesitas y te responderemos lo antes posible.</p>
       <form action="#" method="post" class="formulario">
-          <fieldset>
-            <legend>Tus datos</legend>
-            <div class="formulario__fila">
-              <div class="formulario__campo">
-                <label for="nombre">Nombre completo</label>
-                <input type="text" id="nombre" name="nombre" autocomplete="name" required>
-              </div>
-              <div class="formulario__campo">
-                <label for="email">Correo electrónico</label>
-                <input type="email" id="email" name="email" autocomplete="email" required>
-              </div>
+        <fieldset>
+          <legend>Tus datos</legend>
+          <div class="formulario__fila">
+            <div class="formulario__campo">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" autocomplete="name" required>
             </div>
             <div class="formulario__campo">
-              <label for="telefono">Teléfono <span>(opcional)</span></label>
-              <input type="tel" id="telefono" name="telefono" autocomplete="tel" pattern="[0-9 +()-]{9,15}">
+              <label for="email">Correo electrónico</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
             </div>
-          </fieldset>
-          <fieldset>
-            <legend>Tu consulta</legend>
-            <div class="formulario__campo">
-              <label for="asunto">Asunto</label>
-              <select id="asunto" name="asunto" required>
-                <option value="" selected disabled>Selecciona una opción</option>
-                <option value="alquiler">Alquiler de bici</option>
-                <option value="taller">Taller y reparaciones</option>
-                <option value="ruta">Ruta guiada</option>
-                <option value="otro">Otra consulta</option>
-              </select>
-            </div>
-            <div class="formulario__campo">
-              <label for="mensaje">Mensaje</label>
-              <textarea id="mensaje" name="mensaje" maxlength="500" rows="5" required></textarea>
-            </div>
-          </fieldset>
-          <label class="formulario__consentimiento" for="confirmacion">
-            <input type="checkbox" id="confirmacion" name="confirmacion" required>
-            <span>He leído y acepto que Rueda Libre use mis datos para responder a esta consulta.</span>
-          </label>
-          <button type="submit" class="formulario__boton">Enviar consulta</button>
+          </div>
+          <div class="formulario__campo">
+            <label for="telefono">Teléfono <span>(opcional)</span></label>
+            <input type="tel" id="telefono" name="telefono" autocomplete="tel" pattern="[0-9 +()-]{9,15}">
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Tu consulta</legend>
+          <div class="formulario__campo">
+            <label for="asunto">Asunto</label>
+            <select id="asunto" name="asunto" required>
+              <option value="" selected disabled>Selecciona una opción</option>
+              <option value="alquiler">Alquiler de bici</option>
+              <option value="taller">Taller y reparaciones</option>
+              <option value="ruta">Ruta guiada</option>
+              <option value="otro">Otra consulta</option>
+            </select>
+          </div>
+          <div class="formulario__campo">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" maxlength="500" rows="5" required></textarea>
+          </div>
+        </fieldset>
+        <label class="formulario__consentimiento" for="confirmacion">
+          <input type="checkbox" id="confirmacion" name="confirmacion" required>
+          <span>He leído y acepto que Rueda Libre use mis datos para responder a esta consulta.</span>
+        </label>
+        <button type="submit" class="formulario__boton">Enviar consulta</button>
       </form>
     </div>
   </main>
