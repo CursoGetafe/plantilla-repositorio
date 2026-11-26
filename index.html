@@ -66,18 +66,19 @@
 
 
   <script>
-    let citaCliente = document.getElementById("cita-cliente");
-    let citas = [
+    const citaCliente = document.getElementById("cita-cliente");
+    const citas = [
       '"Probé una bici eléctrica en Rueda Libre antes de comprar la mía y acerté de lleno." — Luis, cliente desde 2022',
       '"El servicio de Rueda Libre es excelente, siempre me ayudan con cualquier problema." — Lucas, cliente desde 2021'
     ];
+    let indiceCita = 0;
+
     setInterval(() => {
-      for (let i = 0; i < citas.length; i++) {
-        if (citaCliente.textContent === citas[i]) {
-          citaCliente.textContent = citas[(i + 1) % citas.length];
-          break;
-        }
-      }
+      indiceCita = (indiceCita + 1) % citas.length;
+      citaCliente.classList.remove("fade-in");
+      citaCliente.textContent = citas[indiceCita];
+      void citaCliente.offsetWidth;
+      citaCliente.classList.add("fade-in");
     }, 5000);
   </script>
 
