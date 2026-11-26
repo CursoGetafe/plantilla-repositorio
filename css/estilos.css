@@ -12,12 +12,6 @@
   padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    scroll-behavior: smooth;
-  }
-}
-
 body {
   min-height: 100vh;
   display: flex;           /* 1. Convierte body en contenedor flex */
@@ -127,13 +121,18 @@ header {
 }
 
 .reservas__formulario {
-  width: 60%;
-  text-align: center;
+  width: min(100%, 52rem);
+  text-align: left;
   padding: 2rem;
-  margin: 1rem; /* 'auto' a los lados centra la tarjeta al tener width: 80% */
+  margin: 1rem;
   background-color: #fff;
   border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25); /* Opacidad suavizada */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+.reservas__main h1 {
+  color: #1E7E52;
+  text-align: center;
 }
 
 /*Contacto*/
@@ -145,6 +144,208 @@ header {
   background-color: #fff;
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25); /* Opacidad suavizada */
+}
+
+.contacto__main h1 {
+  color: #1E7E52;
+  text-align: center;
+}
+
+.contacto__main h2 {
+  color: #1E7E52;
+  margin-bottom: 1rem;
+}
+
+.contacto__formulario {
+  width: min(100%, 52rem);
+  padding: 2rem;
+  margin: 1rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+  text-align: left;
+}
+
+.contacto__intro {
+  margin: -0.5rem 0 1.5rem;
+  color: #4a5a51;
+}
+
+.formulario fieldset {
+  border: 1px solid #d6e2da;
+  border-radius: 0.55rem;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+}
+
+.formulario legend {
+  padding: 0 0.5rem;
+  color: #1E7E52;
+  font-weight: 700;
+}
+
+.formulario__fila {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.reserva__datos-grid,
+.reserva__opciones-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 1.25rem;
+}
+
+.reserva__ancho-completo {
+  grid-column: 1 / -1;
+}
+
+.formulario .reserva__modelos {
+  min-width: 0;
+  margin: 0;
+  padding: 0.8rem 1rem 1rem;
+  background-color: #f7faf8;
+}
+
+.reserva__modelo-opciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.reserva__modelo-opciones label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid #d6e2da;
+  border-radius: 0.45rem;
+  background: #fff;
+  cursor: pointer;
+  padding: 0.65rem 0.8rem;
+  font-weight: 400;
+}
+
+.reserva__modelo-opciones input[type="radio"] {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin: 0;
+  accent-color: #1E7E52;
+}
+
+.formulario__campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-bottom: 1.25rem;
+}
+
+.formulario__campo:last-child {
+  margin-bottom: 0;
+}
+
+.formulario label {
+  color: #26352d;
+  font-weight: 700;
+}
+
+.formulario label span {
+  color: #65736b;
+  font-weight: 400;
+}
+
+.formulario input:not([type="checkbox"]):not([type="radio"]),
+.formulario select,
+.formulario textarea {
+  width: 100%;
+  min-height: 3.25rem;
+  border: 1px solid #aebfb3;
+  border-radius: 0.55rem;
+  background: #fff;
+  color: #26352d;
+  font: inherit;
+  padding: 0.8rem 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.formulario input:not([type="checkbox"]):not([type="radio"]):hover,
+.formulario select:hover,
+.formulario textarea:hover {
+  border-color: #6f9c82;
+}
+
+.formulario textarea {
+  resize: vertical;
+  min-height: 11rem;
+  line-height: 1.6;
+}
+
+.formulario input:not([type="checkbox"]):not([type="radio"]):focus,
+.formulario select:focus,
+.formulario textarea:focus {
+  border-color: #1E7E52;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(30, 126, 82, 0.16);
+}
+
+.formulario__consentimiento {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin: 0.5rem 0 1.5rem;
+  color: #26352d;
+  font-weight: 400;
+}
+
+.formulario__consentimiento input {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex: 0 0 auto;
+  margin-top: 0.15rem;
+  accent-color: #1E7E52;
+}
+
+.formulario__boton {
+  display: block;
+  min-width: 13rem;
+  min-height: 3.5rem;
+  margin-left: auto;
+  border: 0;
+  border-radius: 0.55rem;
+  background: linear-gradient(135deg, #23875b, #176b46);
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 0.85rem 1.5rem;
+  box-shadow: 0 0.3rem 0.75rem rgba(23, 107, 70, 0.22);
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.formulario__boton:hover {
+  background: linear-gradient(135deg, #1d754e, #125b3b);
+  box-shadow: 0 0.45rem 0.9rem rgba(23, 107, 70, 0.3);
+  transform: translateY(-2px);
+}
+
+.formulario__boton:active {
+  box-shadow: 0 0.15rem 0.4rem rgba(23, 107, 70, 0.22);
+  transform: translateY(0);
+}
+
+.formulario__boton:focus-visible {
+  outline: 3px solid #76c9a3;
+  outline-offset: 3px;
+}
+
+.como-llegar iframe {
+  width: 100%;
+  max-width: 700px;
+  height: 350px;
+  border: 0;
+  margin-top: 0.75rem;
 }
 
 article ul, div ul{
@@ -163,5 +364,3 @@ footer {
 }
 
 /* 4. Componentes */
-
-/* 5. Consultas de medios (sesión 10) */

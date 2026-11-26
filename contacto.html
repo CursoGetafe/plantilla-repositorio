@@ -15,14 +15,6 @@
   <title>Sede y contacto · Rueda Libre</title>
   <!-- TODO (sesión 8): enlaza aquí tu hoja de estilos -->
   <link rel="stylesheet" href="css/estilos.css">
-  <style>
-    iframe {
-      width: 100%;
-      max-width: 700px;
-      height: 350px;
-      border: 0;
-    }
-  </style>
 </head>
 
 <body>
@@ -42,18 +34,19 @@
 
   <main class="contacto__main">
     <!-- TODO: un único h1 con el título de la página -->
-    <div class="sede__contacto">
     <h1>Sede y contacto</h1>
-    <!-- TODO (sesión 3): sustituye por el texto real de la carpeta «textos» -->
-    <p>Dirección:</p>
-    <address>
-      Calle de la Rueda, 12<br>
-      28901 Getafe (Madrid)
-    </address>
-    <p>Teléfono: <a href="tel:+34910000000">910 000 000</a>
-    </p>
-    <p>Correo: <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>
-    </p>
+    <div class="sede__contacto">
+      <h2>Visítanos</h2>
+      <!-- TODO (sesión 3): sustituye por el texto real de la carpeta «textos» -->
+      <p>Dirección:</p>
+      <address>
+        Calle de la Rueda, 12<br>
+        28901 Getafe (Madrid)
+      </address>
+      <p>Teléfono: <a href="tel:+34910000000">910 000 000</a>
+      </p>
+      <p>Correo: <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>
+      </p>
     </div>
     <div aria-labelledby="como-llegar" class="como-llegar">
       <h2 id="como-llegar">Cómo llegar</h2>
@@ -76,7 +69,52 @@
           target="_blank" rel="noopener noreferrer">
           Ver el mapa más grande
         </a></small>
-      un mapa de imagen o SVG con zonas pulsables.
+    </div>
+
+    <div class="contacto__formulario" aria-labelledby="formulario-contacto">
+      <h2 id="formulario-contacto">Escríbenos</h2>
+      <p class="contacto__intro">Cuéntanos qué necesitas y te responderemos lo antes posible.</p>
+      <form action="#" method="post" class="formulario">
+          <fieldset>
+            <legend>Tus datos</legend>
+            <div class="formulario__fila">
+              <div class="formulario__campo">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+              </div>
+              <div class="formulario__campo">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+              </div>
+            </div>
+            <div class="formulario__campo">
+              <label for="telefono">Teléfono <span>(opcional)</span></label>
+              <input type="tel" id="telefono" name="telefono" autocomplete="tel" pattern="[0-9 +()-]{9,15}">
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Tu consulta</legend>
+            <div class="formulario__campo">
+              <label for="asunto">Asunto</label>
+              <select id="asunto" name="asunto" required>
+                <option value="" selected disabled>Selecciona una opción</option>
+                <option value="alquiler">Alquiler de bici</option>
+                <option value="taller">Taller y reparaciones</option>
+                <option value="ruta">Ruta guiada</option>
+                <option value="otro">Otra consulta</option>
+              </select>
+            </div>
+            <div class="formulario__campo">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" maxlength="500" rows="5" required></textarea>
+            </div>
+          </fieldset>
+          <label class="formulario__consentimiento" for="confirmacion">
+            <input type="checkbox" id="confirmacion" name="confirmacion" required>
+            <span>He leído y acepto que Rueda Libre use mis datos para responder a esta consulta.</span>
+          </label>
+          <button type="submit" class="formulario__boton">Enviar consulta</button>
+      </form>
     </div>
   </main>
 

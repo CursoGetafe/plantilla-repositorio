@@ -24,9 +24,9 @@
     <nav class="reserva__nav" aria-label="Principal">
       <ul>
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="servicios.html" aria-current="page">Servicios</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
         <li><a href="tarifas.html">Tarifas</a></li>
-        <li><a href="reserva.html">Reserva</a></li>
+        <li><a href="reserva.html" aria-current="page">Reserva</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
@@ -34,51 +34,71 @@
 
   <main class="reservas__main">
     <h1>Reserva tu bici eléctrica hoy.</h1>
-      <form action="/resservas" method="post" class="reservas__formulario">
+    <form action="/resservas" method="post" class="reservas__formulario formulario">
       <fieldset>
         <legend>Tus datos</legend>
-        <label for="nombre">Nombre completo</label>
+        <div class="reserva__datos-grid">
+          <div class="formulario__campo">
+            <label for="nombre">Nombre completo</label>
           <input type="text" id="nombre" name="nombre" autocomplete="name" required>
-        <label for="email">Correo electrónico</label>
+          </div>
+          <div class="formulario__campo">
+            <label for="email">Correo electrónico</label>
           <input type="email" id="email" name="email" autocomplete="email" required>
-        <label for="telefono">Teléfono</label>
+          </div>
+          <div class="formulario__campo reserva__ancho-completo">
+            <label for="telefono">Teléfono</label>
           <input type="tel" id="telefono" name="telefono" autocomplete="tel" pattern="^[6-9]\d{8}$" title="Debe ser un número de 9 dígitos que empieza por 6, 7, 8 o 9" required>
+          </div>
+        </div>
       </fieldset>
       <fieldset>
         <legend>Tu reserva</legend>
-        <label for="servicio">Servicio</label>
+        <div class="reserva__opciones-grid">
+          <div class="formulario__campo">
+            <label for="servicio">Servicio</label>
           <select id="servicio" name="servicio" required>
             <option value="alquiler">Alquiler</option>
             <option value="taller">Taller</option>
             <option value="revision">Revisión de batería y motor</option>
             <option value="ruta">Ruta guiada</option>
           </select>
-          <label for="modelo">Modelo de bici</label>
-          <input type="radio" id="modelo-urbana" name="modelo" value="urbana">
-          <label for="modelo-urbana">Urbana</label>
-          <input type="radio" id="modelo-montana" name="modelo" value="montana">
-          <label for="modelo-montana">Montaña</label>
-          <input type="radio" id="modelo-plegable" name="modelo" value="plegable">
-          <label for="modelo-plegable">Plegable</label>
-          <label for="fecha">Fecha</label>
-          <input type="date" id="fecha" name="fecha" min="" required>
-          <label for="hora">Hora</label>
-          <input type="time" id="hora" name="hora" min="09:30" max="19:30" required>
-          <label for="duracion">Duración</label>
-          <input type="number" id="duracion" name="duracion" min="1" max="8" required>
-          <label for="observaciones">Observaciones</label>
-          <textarea id="observaciones" name="observaciones" maxlength="300"></textarea>
+          </div>
+          <fieldset class="reserva__modelos">
+            <legend>Modelo de bici</legend>
+            <div class="reserva__modelo-opciones">
+              <label for="modelo-urbana"><input type="radio" id="modelo-urbana" name="modelo" value="urbana"> Urbana</label>
+              <label for="modelo-montana"><input type="radio" id="modelo-montana" name="modelo" value="montana"> Montaña</label>
+              <label for="modelo-plegable"><input type="radio" id="modelo-plegable" name="modelo" value="plegable"> Plegable</label>
+            </div>
+          </fieldset>
+          <div class="formulario__campo">
+            <label for="fecha">Fecha</label>
+            <input type="date" id="fecha" name="fecha" required>
+          </div>
+          <div class="formulario__campo">
+            <label for="hora">Hora</label>
+            <input type="time" id="hora" name="hora" min="09:30" max="19:30" required>
+          </div>
+          <div class="formulario__campo">
+            <label for="duracion">Duración (horas)</label>
+            <input type="number" id="duracion" name="duracion" min="1" max="8" required>
+          </div>
+          <div class="formulario__campo reserva__ancho-completo">
+            <label for="observaciones">Observaciones <span>(opcional)</span></label>
+            <textarea id="observaciones" name="observaciones" maxlength="300" rows="4"></textarea>
+          </div>
+        </div>
       </fieldset>
       <fieldset>
         <legend>Consentimiento</legend>
-        <input type="checkbox" id="confirmacion" name="confirmacion" required>
-        <label for="confirmacion">He leído y acepto que Rueda Libre use mis datos únicamente para gestionar esta reserva. Puedo pedir que los borren escribiendo a hola@ruedalibre.example.</label>
-        </fieldset>
-      <button type="submit">Reservar</button>
+        <label class="formulario__consentimiento" for="confirmacion">
+          <input type="checkbox" id="confirmacion" name="confirmacion" required>
+          <span>He leído y acepto que Rueda Libre use mis datos únicamente para gestionar esta reserva. Puedo pedir que los borren escribiendo a hola@ruedalibre.example.</span>
+        </label>
+      </fieldset>
+      <button type="submit" class="formulario__boton">Reservar</button>
     </form>
-
-
-
   </main>
 
   <footer>
