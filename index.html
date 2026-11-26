@@ -40,22 +40,18 @@
       <p class="razon">- Bicis listas para salir: revisadas y con la batería cargada.</p>
       <p class="razon">- Precios claros: sin sorpresas ni letra pequeña.</p>
       <p class="razon">- Atención cercana: te explicamos cómo funciona la bici antes de que salgas.</p>
-    </div>
 
-    <div class="acciones__inicio">
-      <a href="reserva.html">Reserva tu bici</a>
-      <br>
-      <a href="tarifas.html">Mira las tarifas</a>
-    </div>
-
-    <div class="resumen__negocio">
       <h2>Resumen del negocio</h2>
-      <p>Rueda Libre nació en 2009 como un pequeño taller de barrio. Hoy, además de reparar bicicletas, 
-        alquilamos bicis eléctricas para que puedas moverte por Getafe y sus alrededores sin esfuerzo y sin atascos.</p>
+      <p>Rueda Libre nació en 2009 como un pequeño taller de barrio. Hoy, además de reparar bicicletas, alquilamos bicis eléctricas para que puedas moverte por Getafe y sus alrededores sin esfuerzo y sin atascos.</p>
+
+      <br>
+
+      <button><a href="reserva.html">Reserva tu bici</a></button>
+      <button><a href="tarifas.html">Mira las tarifas</a></button>
     </div>
 
     <div class="citas__clientes">
-      <cite class="cita-cliente">"Probé una bici eléctrica en Rueda Libre antes de comprar la mía y acerté de lleno." — Luis, cliente desde 2022</cite>
+      <cite class="cita-cliente" id="cita-cliente">"Probé una bici eléctrica en Rueda Libre antes de comprar la mía y acerté de lleno." — Luis, cliente desde 2022</cite>
     </div>
 
   </main>
@@ -67,5 +63,23 @@
     <p>Teléfono: <a href="tel:+34915555555">+34 915 55 55 55</a></p>
     <p>Correo: <a href="mailto:info@ruedalibre.es">info@ruedalibre.es</a></p>
   </footer>
+
+
+  <script>
+    let citaCliente = document.getElementById("cita-cliente");
+    let citas = [
+      '"Probé una bici eléctrica en Rueda Libre antes de comprar la mía y acerté de lleno." — Luis, cliente desde 2022',
+      '"El servicio de Rueda Libre es excelente, siempre me ayudan con cualquier problema." — Lucas, cliente desde 2021'
+    ];
+    setInterval(() => {
+      for (let i = 0; i < citas.length; i++) {
+        if (citaCliente.textContent === citas[i]) {
+          citaCliente.textContent = citas[(i + 1) % citas.length];
+          break;
+        }
+      }
+    }, 5000);
+  </script>
+
 </body>
 </html>
